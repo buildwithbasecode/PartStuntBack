@@ -8,6 +8,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "node tests/applyStrategyToItems.test.js && node tests/updateListingPricingRoute.test.js"
+    "test": "node tests/applyStrategyToItems.test.js"
   },
   "keywords": [],
   "author": "",
@@ -35,5 +36,7 @@
     "mongodb-memory-server": "^10.1.4",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.1"
+    "nodemon": "^3.1.10",
+    "mongodb-memory-server": "^9.10.0"
   }
 }
