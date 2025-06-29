@@ -13,6 +13,7 @@ import authRoutes from './routes/authRoute.js';
 import pricingStrategiesRouter from './routes/pricingStrategies.js';
 import priceHistoryRoutes from './routes/priceHistory.js';
 import competitorRulesRouter from './routes/competitorRule.js';
+import inventoryRoutes from './routes/inventory.js';
 
 // Models (if you need to attach models to `app.locals` or `app.set('models', {...})`)
 import PriceHistory from './models/PriceHistory.js';
@@ -62,6 +63,9 @@ app.use('/api/price-history', priceHistoryRoutes); // This should now work corre
 
 // 6) Competitor‐rules endpoints (create/edit/delete competitor rules, debug, etc.)
 app.use('/api/competitor-rules', competitorRulesRouter);
+
+// 7) Inventory management endpoints (price updates, listing details)
+app.use('/api/inventory', inventoryRoutes);
 
 // ── Basic sanity check endpoint ─────────────────────────────────────────────────
 app.get('/', (req, res) => {
